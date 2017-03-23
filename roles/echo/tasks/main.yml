@@ -1,0 +1,3 @@
+---
+- name: Installs latest stable version of Ruby
+  shell: echo test

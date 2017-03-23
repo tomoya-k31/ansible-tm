@@ -1,0 +1,4 @@
+# Ansible実行対象のHost管理
+Host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null

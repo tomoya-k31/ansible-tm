@@ -1,0 +1,6 @@
+---
+- name: HOME環境変数の出力
+  debug: msg="{{ ansible_env.HOME | quote }}"
+- name: 必須vars:machine_nameのチェック
+  fail:
+  when: machine_name is not defined

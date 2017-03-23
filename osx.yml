@@ -1,0 +1,10 @@
+---
+- name: setup my macbook
+  hosts: local_mac
+  connection: ssh
+  become: false
+  vars:
+    machine: "mac"
+  roles:
+    - common
+    - echo
