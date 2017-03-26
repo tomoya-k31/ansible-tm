@@ -7,3 +7,5 @@
   when: machine_name is not defined
 - name: Git設定
   include: git.yml
+- name: vault検証
+  debug: msg="test_key={{ test_key }}"

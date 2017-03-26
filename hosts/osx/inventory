@@ -4,3 +4,7 @@ localhost
 [local_mac:vars]
 machine_name=macbook
 ansible_connection=local
+
+# ローカルPCグループ（OS問わず）
+[local_pc]
+localhost
