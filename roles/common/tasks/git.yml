@@ -1,0 +1,43 @@
+---
+- git_config: name=user.name scope=global value="{{ git.name }}"
+- git_config: name=user.email scope=global value="{{ git.email }}"
+
+- git_config:
+    name: core.editor
+    scope: global
+    value: 'vim -c "set fenc=utf-8"'
+
+- git_config:
+    name: push.default
+    scope: global
+    value: simple
+
+- git_config:
+    name: diff.tool
+    scope: global
+    value: vimdiff
+
+# alias
+- git_config:
+    name: alias.st
+    scope: global
+    value: status
+
+# color
+- git_config: name=color.status scope=global value=auto
+- git_config: name=color.diff scope=global value=auto
+- git_config: name=color.ui scope=global value=auto
+- git_config: name=color.branch scope=global value=auto
+- git_config: name=color.interactive scope=global value=auto
+
+# for mac
+- git_config:
+    name: core.quotepath
+    scope: global
+    value: false
+  when: ansible_os_family == 'Darwin'
+- git_config:
+    name: core.precomposeunicode
+    scope: global
+    value: true
+  when: ansible_os_family == 'Darwin'

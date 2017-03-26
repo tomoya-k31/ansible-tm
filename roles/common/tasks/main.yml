@@ -1,6 +1,9 @@
 ---
 - name: HOME環境変数の出力
   debug: msg="{{ ansible_env.HOME | quote }}"
+  # gather_facts: noにすると失敗します
 - name: 必須vars:machine_nameのチェック
   fail:
   when: machine_name is not defined
+- name: Git設定
+  include: git.yml
