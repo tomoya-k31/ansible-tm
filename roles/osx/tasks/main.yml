@@ -1,0 +1,4 @@
+---
+- name: Homebrew設定
+  include: homebrew.yml
+  when: ansible_os_family == 'Darwin'
