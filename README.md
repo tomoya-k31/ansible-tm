@@ -15,12 +15,13 @@ $ ansible-playbook -i hosts/osx osx.yml
 #### Install
 
 - Install Xcode
-- `sudo easy_install pip`
-- `sudo pip install ansible --quiet`
+- `$ sudo easy_install pip`
+- `$ sudo pip install ansible --quiet`
 - Install python library for faster compound processing
 
-```
-env CRYPTOGRAPHY_OSX_NO_LINK_FLAGS=1 \
+```sh
+$ brew install openssl
+$ env CRYPTOGRAPHY_OSX_NO_LINK_FLAGS=1 \
 LDFLAGS="$(brew --prefix openssl)/lib" \
 CFLAGS="-I$(brew --prefix openssl)/include" \
 pip install cryptography
